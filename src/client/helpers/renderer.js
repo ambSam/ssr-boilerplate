@@ -14,7 +14,9 @@ export default (req, store) => {
   );
   return `
      <html>
-      <head></head>
+      <head>
+        <link rel="stylesheet" type="text/css" href="./styles.css"/>
+      </head>
       <body>
         <div id="root">${content}</div>
         <script src="bundle.js"></script>

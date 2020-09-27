@@ -36,12 +36,32 @@
 /******/ 	// define getter function for harmony exports
 /******/ 	__webpack_require__.d = function(exports, name, getter) {
 /******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
 /******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
 /******/ 	};
 /******/
 /******/ 	// getDefaultExport function for compatibility with non-harmony modules
@@ -59,499 +79,217 @@
 /******/ 	// __webpack_public_path__
 /******/ 	__webpack_require__.p = "";
 /******/
+/******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/server/index.js");
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ "./routes.js":
+/*!*******************!*\
+  !*** ./routes.js ***!
+  \*******************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _src_client_components_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./src/client/components/Home */ \"./src/client/components/Home.js\");\n/* harmony import */ var _src_client_components_users_list__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./src/client/components/users-list */ \"./src/client/components/users-list.js\");\n\n\n\n // import Card from \"./src/client/components/display-card\";\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n    exact: true,\n    path: \"/\",\n    component: _src_client_components_Home__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n  }));\n});\n\n//# sourceURL=webpack:///./routes.js?");
+
+/***/ }),
+
+/***/ "./src/client/components/Home.js":
+/*!***************************************!*\
+  !*** ./src/client/components/Home.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _home_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home.css */ \"./src/client/components/home.css\");\n/* harmony import */ var _home_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_home_css__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar Home = function Home() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"bg_color\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, \"Hi there!!!\"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"button\", {\n    onClick: function onClick() {\n      return console.log(\"Button pressed\");\n    }\n  }, \"Press ME\"));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Home);\n\n//# sourceURL=webpack:///./src/client/components/Home.js?");
+
+/***/ }),
+
+/***/ "./src/client/components/home.css":
+/*!****************************************!*\
+  !*** ./src/client/components/home.css ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/client/components/home.css?");
+
+/***/ }),
+
+/***/ "./src/client/components/users-list.js":
+/*!*********************************************!*\
+  !*** ./src/client/components/users-list.js ***!
+  \*********************************************/
+/*! exports provided: default */
 /***/ (function(module, exports) {
 
-module.exports = require("react");
+eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nError: ENOENT: no such file or directory, open '/Users/a0g0436/Documents/ssr-boilerplate/src/client/components/users-list.js'\");\n\n//# sourceURL=webpack:///./src/client/components/users-list.js?");
 
 /***/ }),
-/* 1 */
+
+/***/ "./src/client/helpers/createStore.js":
+/*!*******************************************!*\
+  !*** ./src/client/helpers/createStore.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"redux\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ \"redux-thunk\");\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_thunk__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _store_reducers_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../store/reducers/index */ \"./src/client/store/reducers/index.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var store = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"createStore\"])(_store_reducers_index__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {}, Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"applyMiddleware\"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1___default.a));\n  return store;\n});\n\n//# sourceURL=webpack:///./src/client/helpers/createStore.js?");
+
+/***/ }),
+
+/***/ "./src/client/helpers/renderer.js":
+/*!****************************************!*\
+  !*** ./src/client/helpers/renderer.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ \"react-router-dom\");\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ \"react-redux\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../routes */ \"./routes.js\");\n\n\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function (req, store) {\n  var content = Object(react_dom_server__WEBPACK_IMPORTED_MODULE_1__[\"renderToString\"])( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__[\"Provider\"], {\n    store: store\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__[\"StaticRouter\"], {\n    location: req.path,\n    context: {}\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_routes__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null))));\n  return \"\\n     <html>\\n      <head>\\n        <link rel=\\\"stylesheet\\\" type=\\\"text/css\\\" href=\\\"./styles.css\\\"/>\\n      </head>\\n      <body>\\n        <div id=\\\"root\\\">\".concat(content, \"</div>\\n        <script src=\\\"bundle.js\\\"></script>\\n      </body>\\n    </html>\\n     \");\n});\n\n//# sourceURL=webpack:///./src/client/helpers/renderer.js?");
+
+/***/ }),
+
+/***/ "./src/client/store/actions/users.js":
+/*!*******************************************!*\
+  !*** ./src/client/store/actions/users.js ***!
+  \*******************************************/
+/*! exports provided: FETCH_USERS, fetchUsers */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"FETCH_USERS\", function() { return FETCH_USERS; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"fetchUsers\", function() { return fetchUsers; });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"axios\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\nvar FETCH_USERS = \"fetch_users\";\nvar fetchUsers = function fetchUsers() {\n  return function (dispatch) {\n    // let res = await axios.get(\"http://react-ssr-api.herokuapp.com/users\");\n    var res = [{\n      name: \"Akansha\",\n      id: 1\n    }];\n    dispatch({\n      type: FETCH_USERS,\n      payload: res\n    });\n  };\n};\n\n//# sourceURL=webpack:///./src/client/store/actions/users.js?");
+
+/***/ }),
+
+/***/ "./src/client/store/reducers/index.js":
+/*!********************************************!*\
+  !*** ./src/client/store/reducers/index.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"redux\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _users__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users */ \"./src/client/store/reducers/users.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  users: _users__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n}));\n\n//# sourceURL=webpack:///./src/client/store/reducers/index.js?");
+
+/***/ }),
+
+/***/ "./src/client/store/reducers/users.js":
+/*!********************************************!*\
+  !*** ./src/client/store/reducers/users.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _actions_users__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/users */ \"./src/client/store/actions/users.js\");\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _actions_users__WEBPACK_IMPORTED_MODULE_0__[\"FETCH_USERS\"]:\n      return _objectSpread(_objectSpread({}, state), {}, {\n        usersList: action.payload\n      });\n\n    default:\n      return state;\n  }\n});\n\n//# sourceURL=webpack:///./src/client/store/reducers/users.js?");
+
+/***/ }),
+
+/***/ "./src/server/index.js":
+/*!*****************************!*\
+  !*** ./src/server/index.js ***!
+  \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _client_helpers_renderer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../client/helpers/renderer */ \"./src/client/helpers/renderer.js\");\n/* harmony import */ var _client_helpers_createStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../client/helpers/createStore */ \"./src/client/helpers/createStore.js\");\n// import \"babel-polyfill\";\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.use(express__WEBPACK_IMPORTED_MODULE_0___default.a[\"static\"](\"public\"));\napp.get(\"*\", function (req, res) {\n  var store = Object(_client_helpers_createStore__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n  res.send(Object(_client_helpers_renderer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(req, store));\n});\napp.listen(3000, function () {\n  console.log(\"Listening to port 3000\");\n});\n\n//# sourceURL=webpack:///./src/server/index.js?");
+
+/***/ }),
+
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react-router-dom");
+eval("module.exports = require(\"axios\");\n\n//# sourceURL=webpack:///external_%22axios%22?");
 
 /***/ }),
-/* 2 */
+
+/***/ "express":
+/*!**************************!*\
+  !*** external "express" ***!
+  \**************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react-redux");
+eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
 
 /***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.fetchUsers = exports.FETCH_USERS = undefined;
-
-var _axios = __webpack_require__(12);
-
-var _axios2 = _interopRequireDefault(_axios);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var FETCH_USERS = exports.FETCH_USERS = "fetch_users";
-var fetchUsers = exports.fetchUsers = function fetchUsers() {
-  return function (dispatch) {
-    // let res = await axios.get("http://react-ssr-api.herokuapp.com/users");
-    var res = [{ name: "Akansha", id: 1 }];
-    dispatch({
-      type: FETCH_USERS,
-      payload: res
-    });
-  };
-};
-
-/***/ }),
-/* 4 */
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("redux");
+eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_%22react%22?");
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _express = __webpack_require__(6);
-
-var _express2 = _interopRequireDefault(_express);
-
-var _renderer = __webpack_require__(7);
-
-var _renderer2 = _interopRequireDefault(_renderer);
-
-var _createStore = __webpack_require__(15);
-
-var _createStore2 = _interopRequireDefault(_createStore);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var app = (0, _express2.default)(); // import "babel-polyfill";
-
-
-app.use(_express2.default.static("public"));
-app.get("*", function (req, res) {
-  var store = (0, _createStore2.default)();
-
-  res.send((0, _renderer2.default)(req, store));
-});
-
-app.listen(3000, function () {
-  console.log("Listening to port 3000");
-});
-
-/***/ }),
-/* 6 */
+/***/ "react-dom/server":
+/*!***********************************!*\
+  !*** external "react-dom/server" ***!
+  \***********************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("express");
+eval("module.exports = require(\"react-dom/server\");\n\n//# sourceURL=webpack:///external_%22react-dom/server%22?");
 
 /***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _server = __webpack_require__(8);
-
-var _reactRouterDom = __webpack_require__(1);
-
-var _reactRedux = __webpack_require__(2);
-
-var _routes = __webpack_require__(9);
-
-var _routes2 = _interopRequireDefault(_routes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function (req, store) {
-  var content = (0, _server.renderToString)(_react2.default.createElement(
-    _reactRedux.Provider,
-    { store: store },
-    _react2.default.createElement(
-      _reactRouterDom.StaticRouter,
-      { location: req.path, context: {} },
-      _react2.default.createElement(_routes2.default, null)
-    )
-  ));
-  return "\n     <html>\n      <head></head>\n      <body>\n        <div id=\"root\">" + content + "</div>\n        <script src=\"bundle.js\"></script>\n      </body>\n    </html>\n     ";
-};
-
-/***/ }),
-/* 8 */
+/***/ "react-redux":
+/*!******************************!*\
+  !*** external "react-redux" ***!
+  \******************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("react-dom/server");
+eval("module.exports = require(\"react-redux\");\n\n//# sourceURL=webpack:///external_%22react-redux%22?");
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(1);
-
-var _Home = __webpack_require__(10);
-
-var _Home2 = _interopRequireDefault(_Home);
-
-var _usersList = __webpack_require__(11);
-
-var _usersList2 = _interopRequireDefault(_usersList);
-
-var _displayCard = __webpack_require__(13);
-
-var _displayCard2 = _interopRequireDefault(_displayCard);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/", component: _displayCard2.default }),
-    _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: "/users", component: _usersList2.default })
-  );
-};
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Home = function Home() {
-  return _react2.default.createElement(
-    "div",
-    null,
-    _react2.default.createElement(
-      "span",
-      null,
-      "Hi there!!!"
-    ),
-    _react2.default.createElement(
-      "button",
-      { onClick: function onClick() {
-          return console.log("Button pressed");
-        } },
-      "Press ME"
-    )
-  );
-};
-
-exports.default = Home;
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(2);
-
-var _users = __webpack_require__(3);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var UsersList = function (_Component) {
-  _inherits(UsersList, _Component);
-
-  function UsersList() {
-    _classCallCheck(this, UsersList);
-
-    return _possibleConstructorReturn(this, (UsersList.__proto__ || Object.getPrototypeOf(UsersList)).apply(this, arguments));
-  }
-
-  _createClass(UsersList, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.fetch_users();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        null,
-        this.props.users && this.props.users.map(function (user) {
-          return user.name;
-        })
-      );
-    }
-  }]);
-
-  return UsersList;
-}(_react.Component);
-
-var mapStateToProps = function mapStateToProps(state) {
-  console.log(state);
-  return {
-    users: state.users.usersList
-  };
-};
-
-var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-  return {
-    fetch_users: function fetch_users() {
-      return dispatch((0, _users.fetchUsers)());
-    }
-  };
-};
-
-exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(UsersList);
-
-/***/ }),
-/* 12 */
+/***/ "react-router-dom":
+/*!***********************************!*\
+  !*** external "react-router-dom" ***!
+  \***********************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("axios");
+eval("module.exports = require(\"react-router-dom\");\n\n//# sourceURL=webpack:///external_%22react-router-dom%22?");
 
 /***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(14);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Card = function (_React$Component) {
-  _inherits(Card, _React$Component);
-
-  function Card() {
-    _classCallCheck(this, Card);
-
-    return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).apply(this, arguments));
-  }
-
-  _createClass(Card, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "row type" },
-        _react2.default.createElement(
-          "div",
-          { className: "column" },
-          _react2.default.createElement(
-            "div",
-            { className: "card" },
-            _react2.default.createElement(
-              "h3",
-              null,
-              "Card 1"
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Some text"
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Some text"
-            )
-          )
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "column" },
-          _react2.default.createElement(
-            "div",
-            { className: "card" },
-            _react2.default.createElement(
-              "h3",
-              null,
-              "Card 2"
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Some text"
-            ),
-            _react2.default.createElement(
-              "p",
-              null,
-              "Some text"
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Card;
-}(_react2.default.Component);
-
-exports.default = Card;
-
-/***/ }),
-/* 14 */
+/***/ "redux":
+/*!************************!*\
+  !*** external "redux" ***!
+  \************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: C:\\Users\\akansha.gupta09\\Documents\\SpaceX\\src\\client\\components\\card.css Unexpected token (1:0)\nYou may need an appropriate loader to handle this file type.\n| .type {\r\n|   box-sizing: border-box;\r\n| }\r");
+eval("module.exports = require(\"redux\");\n\n//# sourceURL=webpack:///external_%22redux%22?");
 
 /***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _redux = __webpack_require__(4);
-
-var _reduxThunk = __webpack_require__(16);
-
-var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
-
-var _index = __webpack_require__(17);
-
-var _index2 = _interopRequireDefault(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-  var store = (0, _redux.createStore)(_index2.default, {}, (0, _redux.applyMiddleware)(_reduxThunk2.default));
-  return store;
-};
-
-/***/ }),
-/* 16 */
+/***/ "redux-thunk":
+/*!******************************!*\
+  !*** external "redux-thunk" ***!
+  \******************************/
+/*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = require("redux-thunk");
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _redux = __webpack_require__(4);
-
-var _users = __webpack_require__(18);
-
-var _users2 = _interopRequireDefault(_users);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = (0, _redux.combineReducers)({
-  users: _users2.default
-});
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _users = __webpack_require__(3);
-
-exports.default = function () {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var action = arguments[1];
-
-  switch (action.type) {
-    case _users.FETCH_USERS:
-      return _extends({}, state, {
-        usersList: action.payload
-      });
-    default:
-      return state;
-  }
-};
+eval("module.exports = require(\"redux-thunk\");\n\n//# sourceURL=webpack:///external_%22redux-thunk%22?");
 
 /***/ })
-/******/ ]);
+
+/******/ });
